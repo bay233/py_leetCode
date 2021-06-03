@@ -1,8 +1,5 @@
 # 220. 存在重复元素 III
 
-from sortedcontainers import SortedList
-
-
 class Solution:
     # nums:List[int]
     def containsNearbyAlmostDuplicate(self, nums, k: int, t: int) -> bool:
