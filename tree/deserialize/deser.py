@@ -18,9 +18,9 @@ class Codec:
                     tmp_level.append(node.left)
                     tmp_level.append(node.right)
                 else:
-                    serialize_val.append('#')
+                    serialize_val.append(None)
             if tmp_level: queue.append(tmp_level)
-        while serialize_val and serialize_val[-1] == '#':
+        while serialize_val and serialize_val[-1] == None:
             serialize_val.pop()
         return serialize_val
 
@@ -35,12 +35,12 @@ class Codec:
                 node = level.pop(0)
                 if data:
                     val = data.pop(0)
-                    if val != '#':
+                    if val != None:
                         node.left = TreeNode(val)
                         tmp_level.append(node.left)
                 if data:
                     val = data.pop(0)
-                    if val != '#':
+                    if val != None:
                         node.right = TreeNode(val)
                         tmp_level.append(node.right)
             if tmp_level: queue.append(tmp_level)
