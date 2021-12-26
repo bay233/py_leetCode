@@ -6,6 +6,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def searchBST(self, root: TreeNode, val: int) -> TreeNode:
         if not root: return root
@@ -13,5 +14,5 @@ class Solution:
             return self.searchBST(root.left, val)
         elif val > root.val:
             return self.searchBST(root.right, val)
-        else :
+        else:
             return root
